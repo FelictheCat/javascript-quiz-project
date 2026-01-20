@@ -29,8 +29,15 @@ class Quiz {
     }
     // 5. checkAnswer(answer)
     checkAnswer(){
-        
+        const currentQuestion = this.getQuestion();
+        if (answer === currentQuestion.answer) {
+            this.correctAnswers++;
+    }
     }
 
     // 6. hasEnded()
+    hasEnded() {
+            return this.currentQuestionIndex === this.questions.length;
+    }
+
 }
