@@ -40,4 +40,15 @@ class Quiz {
             return this.currentQuestionIndex === this.questions.length;
     }
 
-}
+};
+
+
+
+filterQuestionsByDifficulty(difficulty) ;{
+    return this.questions.filter(question => question.difficulty === difficulty);
+};
+
+averageDifficulty() ;{
+    const totalDifficulty = this.questions.reduce((sum, question) => sum + question.difficulty, 0);
+    return totalDifficulty / this.questions.length;
+};
